@@ -25,6 +25,7 @@ public class EmployeeClient
 	
 	// ***** create objects *****
 		
+		ProgramInfo Printer = new ProgramInfo();
 		
 	// ***** create input stream *****
 	
@@ -32,11 +33,7 @@ public class EmployeeClient
 		
 	// ***** Print Banner *****
 	
-		System.out.println("**********************************");
-		System.out.println("NAME:        Your Name Here");
-		System.out.println("Class:       CS30S");
-		System.out.println("Assignment:  Ax Qy");
-		System.out.println("**********************************");
+		Printer.printBanner("Assignment 3");
 		
 	// ***** get input *****
 	
@@ -53,7 +50,7 @@ public class EmployeeClient
 
 	// ***** closing message *****
 	
-		System.out.println("end of processing");
+		Printer.printClosing();
 	
 	}  // end main	
 }  // end class
