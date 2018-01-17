@@ -1,5 +1,8 @@
 /* **********************************************************
  * Programmer:	Rob Sveinson
+ 
+ hmmmm,  I do good work, update the information in the comment blocks and banners
+ 
  * Class:		CS20S
  * 
  * Assignment:	aX  qY
@@ -88,6 +91,11 @@
 	  *	in:			none
 	  *	out:		overtimePay: double
 	  *******************************************************/
+	 
+	 
+	 // 1.5 and 40 should be declared as constants, either class (static) or instance (non-static) 
+	 // are acceptable.
+	 
 	public double getOvertimePay() {
 		double oWage = hours - 40;		// overtime hourly wage
 		if (oWage > 0) {
@@ -106,6 +114,8 @@
 	public double getGrossPay() {
 		return wage * hours;
 	} // end getGrossPay
+	 
+// gross psy is the sum of regular pay and overtime pay
 	
 	/*******************************************************
 	  *Purpose:		return a formatted string of the
