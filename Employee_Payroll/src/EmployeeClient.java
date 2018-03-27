@@ -4,12 +4,13 @@
 //
 // Assignment:	3
 //
-// Description:	a brief description of the program goes here
+// Description:	Creates an array list of employee objects, then 
+//				proceeds to print out information about them
 //
+//	Input:		Gets wage and hours info from employeeData.txt
 //
-//	Input:		describe any input from keyboard or file
-//
-//  Output:		describe the result of your program
+//  Output:		Outputs formatted information about employee objects
+//				from an array list
 // ***********************************************************************
 
 import javax.swing.*;

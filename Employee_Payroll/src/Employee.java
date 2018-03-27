@@ -5,8 +5,9 @@
  * 
  * Assignment:	3
  *
- * Description:	describe the class you are creating
- *
+ * Description:	Employee class, with an hourly wage and weekly
+ *				hours, that calculates regular pay, overtime
+ *				pay, and gross pay.
  * 
  * *************************************************************
  */
@@ -27,6 +28,9 @@
  	
  	private int hours = 0;			// hours worked in a week
  	private double wage = 0.0;		// hourly wage
+ 	
+ 	private int maxHours = 40;		// max hours before overtime
+ 	private double ovtRate = 1.5;	// overtime rate
  	
  	private int id = 0;		// id of employee
  	
@@ -79,7 +83,14 @@
 	  *	out:		regularPay: double
 	  *******************************************************/
 	public double getRegularPay() {
-		return wage * hours - this.getOvertimePay() / 1.5;
+		double rPay = 0;
+		if (hours <= 40){
+			rPay = hours * wage;
+		}
+		else {
+			rPay = maxHours * wage;
+		}
+		return rPay;
 	} // end getRegularPay
 	
 	/*******************************************************
@@ -95,9 +106,8 @@
 	 // are acceptable.
 	 
 	public double getOvertimePay() {
-		double oWage = hours - 40;		// overtime hourly wage
-		if (oWage > 0) {
-			return wage * 1.5 * oWage;
+		if (hours > maxHours) {
+			return wage * ovtRate * (hours - maxHours);
 		}
 		return 0;
 	} // end getOvertimePay
